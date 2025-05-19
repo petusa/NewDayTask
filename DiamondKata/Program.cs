@@ -58,6 +58,7 @@ public class ProgramWrapper
 
         return DiamondShapeGenerator.Generate(c);
     }
+
 }
 
 class Program
