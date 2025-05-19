@@ -34,12 +34,12 @@ public class UnitTest1
         var application = new ProrgamWrapper();
         string actual = application.Run(args);
 
-        string expected = @"
-    A
-   B B
-  C   C
-   B B
-    A";
+        string expected = @"  A  
+ B B 
+C   C
+ B B 
+  A  
+".ReplaceLineEndings();
 
         Assert.Equal(expected, actual);
     }
@@ -63,12 +63,12 @@ public class UnitTest1
         var application = new ProrgamWrapper();
         string actual = application.Run(args);
 
-        string expected = @"
-    A
-   B B
-  C   C
-   B B
-    A";
+        string expected = @"  A  
+ B B 
+C   C
+ B B 
+  A  
+".ReplaceLineEndings();
 
         Assert.Equal(expected, actual);
     }
