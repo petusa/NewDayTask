@@ -38,7 +38,7 @@ static class DiamondShapeGenerator
 
 }
 
-public class ProrgamWrapper
+public class ProgramWrapper
 {
     public string Run(string[] args)
     {
@@ -62,7 +62,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(new ProrgamWrapper().Run(args));
+        Console.WriteLine(new ProgramWrapper().Run(args));
     }
 
 }

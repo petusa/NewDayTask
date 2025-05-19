@@ -8,7 +8,7 @@ public class DiamondKataTests
     public void TestNoArgumentsProvidedCase()
     {
         string[] args = { };
-        var application = new ProrgamWrapper();
+        var application = new ProgramWrapper();
         var actual = application.Run(args);
 
         var expected = @"Please provide a single character as an argument.";
@@ -20,7 +20,7 @@ public class DiamondKataTests
     public void TestNoSingleCharacterProvidedAsFirstArgumentCase()
     {
         string[] args = { "AB" };
-        var application = new ProrgamWrapper();
+        var application = new ProgramWrapper();
         var actual = application.Run(args);
 
         var expected = @"Please provide a single character as an argument.";
@@ -32,7 +32,7 @@ public class DiamondKataTests
     public void TestIgnoreFurtherArgumentsCase()
     {
         string[] args = { "C", "SomeFurtherArgumentNotTakenIntoAccount" };
-        var application = new ProrgamWrapper();
+        var application = new ProgramWrapper();
         var actual = application.Run(args);
 
         var expected = @"  A  
@@ -49,7 +49,7 @@ C   C
     public void TestNonLetterCase()
     {
         string[] args = { "*" };
-        var application = new ProrgamWrapper();
+        var application = new ProgramWrapper();
         var actual = application.Run(args);
 
         var expected = @"Please provide a character from the English Alphabet.";
@@ -61,7 +61,7 @@ C   C
     public void TestHappyCase()
     {
         string[] args = { "C" };
-        var application = new ProrgamWrapper();
+        var application = new ProgramWrapper();
         var actual = application.Run(args);
 
         var expected = @"  A  
@@ -78,7 +78,7 @@ C   C
     public void TestHappyCaseForCaseSensitiveness()
     {
         string[] args = { "c" };
-        var application = new ProrgamWrapper();
+        var application = new ProgramWrapper();
         var actual = application.Run(args);
 
         var expected = @"  a  
