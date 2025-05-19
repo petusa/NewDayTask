@@ -40,6 +40,7 @@ static class DiamondShapeGenerator
 
 public class ProgramWrapper
 {
+
     public string Run(string[] args)
     {
         if (args.Length == 0 || args[0].Length != 1)
@@ -58,8 +59,10 @@ public class ProgramWrapper
         return DiamondShapeGenerator.Generate(c);
     }
 }
+
 class Program
 {
+
     static void Main(string[] args)
     {
         Console.WriteLine(new ProgramWrapper().Run(args));
