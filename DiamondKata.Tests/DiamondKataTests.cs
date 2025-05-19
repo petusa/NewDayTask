@@ -1,16 +1,17 @@
 namespace DiamondKata.Tests;
 
 using Xunit;
-public class UnitTest1
+
+public class DiamondKataTests
 {
     [Fact]
     public void TestNoArgumentsProvidedCase()
     {
         string[] args = { };
         var application = new ProrgamWrapper();
-        string actual = application.Run(args);
+        var actual = application.Run(args);
 
-        string expected = @"Please provide a single character as an argument.";
+        var expected = @"Please provide a single character as an argument.";
 
         Assert.Equal(expected, actual);
     }
@@ -20,9 +21,9 @@ public class UnitTest1
     {
         string[] args = { "AB" };
         var application = new ProrgamWrapper();
-        string actual = application.Run(args);
+        var actual = application.Run(args);
 
-        string expected = @"Please provide a single character as an argument.";
+        var expected = @"Please provide a single character as an argument.";
 
         Assert.Equal(expected, actual);
     }
@@ -32,9 +33,9 @@ public class UnitTest1
     {
         string[] args = { "C", "SomeFurtherArgumentNotTakenIntoAccount" };
         var application = new ProrgamWrapper();
-        string actual = application.Run(args);
+        var actual = application.Run(args);
 
-        string expected = @"  A  
+        var expected = @"  A  
  B B 
 C   C
  B B 
@@ -49,9 +50,9 @@ C   C
     {
         string[] args = { "*" };
         var application = new ProrgamWrapper();
-        string actual = application.Run(args);
+        var actual = application.Run(args);
 
-        string expected = @"Please provide a character from the English Alphabet.";
+        var expected = @"Please provide a character from the English Alphabet.";
 
         Assert.Equal(expected, actual);
     }
@@ -61,9 +62,9 @@ C   C
     {
         string[] args = { "C" };
         var application = new ProrgamWrapper();
-        string actual = application.Run(args);
+        var actual = application.Run(args);
 
-        string expected = @"  A  
+        var expected = @"  A  
  B B 
 C   C
  B B 
@@ -78,9 +79,9 @@ C   C
     {
         string[] args = { "c" };
         var application = new ProrgamWrapper();
-        string actual = application.Run(args);
+        var actual = application.Run(args);
 
-        string expected = @"  a  
+        var expected = @"  a  
  b b 
 c   c
  b b 
