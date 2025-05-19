@@ -12,23 +12,28 @@ static class DiamondShapeGenerator
         }
         return row;
     }
+
     public static string Generate(char character)
     {
         int indexInAlphabet = character - 'A';
         int size = indexInAlphabet * 2 + 1; // length of rows and columns: size of generated grid
-
-        var sb = new StringBuilder();
+        var output = new StringBuilder();
         for (int i = 0; i < size; i++)
         {
             var row = GenerateEmptyRow(size);
-            var idx = Math.Abs(size / 2 - i);
-            var c = (char)('A' + size / 2 - idx);
-            row[idx] = c;
-            row[size - idx - 1] = c;
-            sb.Append(new string(row));
-            sb.Append("\n");
+
+            var leftIndex = Math.Abs(indexInAlphabet - i);
+            var rightIndex = size - leftIndex - 1;
+
+            var characterInRow = (char)(character - leftIndex);
+
+            row[leftIndex] = characterInRow;
+            row[rightIndex] = characterInRow;
+
+            output.Append(new string(row));
+            output.Append("\n");
         }
-        return sb.ToString();
+        return output.ToString();
     }
 
 }
