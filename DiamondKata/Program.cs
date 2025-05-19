@@ -15,7 +15,7 @@ static class DiamondShapeGenerator
 
     public static string Generate(char character)
     {
-        int indexInAlphabet = character - 'A';
+        int indexInAlphabet = char.ToUpper(character) - 'A';
         int size = indexInAlphabet * 2 + 1; // length of rows and columns: size of generated grid
         var output = new StringBuilder();
         for (int i = 0; i < size; i++)
