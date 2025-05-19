@@ -4,6 +4,13 @@ This repo contains the solution for the DiamondKata test assignment. The goal of
 
 Original task: https://github.com/NewDayTechnology/RecruitmentTests/tree/main/DiamondKata
 
+## Commands
+
+```bash
+# Run tests
+dotnet test
+```
+
 ## Application bootstrap
 
 ```bash
