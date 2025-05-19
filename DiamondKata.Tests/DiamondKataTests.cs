@@ -72,4 +72,21 @@ C   C
 
         Assert.Equal(expected, actual);
     }
+
+    [Fact]
+    public void TestHappyCaseForCaseSensitiveness()
+    {
+        string[] args = { "c" };
+        var application = new ProrgamWrapper();
+        string actual = application.Run(args);
+
+        string expected = @"  a  
+ b b 
+c   c
+ b b 
+  a  
+".ReplaceLineEndings();
+
+        Assert.Equal(expected, actual);
+    }
 }
