@@ -9,6 +9,9 @@ Original task: https://github.com/NewDayTechnology/RecruitmentTests/tree/main/Di
 ```bash
 # Run tests
 dotnet test
+
+# Run application
+dotnet run --project DiamondKata -- "Z"
 ```
 
 ## Application bootstrap
