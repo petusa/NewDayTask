@@ -58,6 +58,18 @@ C   C
     }
 
     [Fact]
+    public void TestHappyCaseForA()
+    {
+        string[] args = { "A" };
+        var application = new ProgramWrapper();
+        var actual = application.Run(args);
+
+        var expected = "A\n";
+
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
     public void TestHappyCase()
     {
         string[] args = { "C" };
