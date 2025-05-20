@@ -40,7 +40,7 @@ public class DiamondKataTests
 C   C
  B B 
   A  
-".ReplaceLineEndings();
+";
 
         Assert.Equal(expected, actual);
     }
@@ -81,7 +81,7 @@ C   C
 C   C
  B B 
   A  
-".ReplaceLineEndings();
+";
 
         Assert.Equal(expected, actual);
     }
@@ -98,7 +98,7 @@ C   C
 c   c
  b b 
   a  
-".ReplaceLineEndings();
+";
 
         Assert.Equal(expected, actual);
     }
